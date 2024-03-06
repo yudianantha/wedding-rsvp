@@ -1,4 +1,8 @@
 body {
     min-height: 100vh;
+    min-width: 100vw;
 }
 
+section {
+    padding: 2rem;
+}
