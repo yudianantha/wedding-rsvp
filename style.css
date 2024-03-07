@@ -118,6 +118,10 @@ section {
     /* border-radius: 30px; */
 }
 
+.border-responsive {
+    border: none;
+}
+
 @media only screen and (min-width: 768px) {
     #map {
         height: 40%;
@@ -127,5 +131,10 @@ section {
       -webkit-scroll-snap-type: y proximity;
           -ms-scroll-snap-type: y proximity;
               scroll-snap-type: y proximity;
+    }
+
+    .border-responsive {
+        border: 1px solid lightgray;
+        border-radius: 15px;
     }
 }
