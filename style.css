@@ -1,8 +1,11 @@
 body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     min-height: 100vh;
-    min-width: 100vw;
 }
 
 section {
-    padding: 2rem;
+    height: 100vh;
+    border-bottom: 1px lightgray solid;
 }
