@@ -18,6 +18,7 @@ async function initMap() {
     zoom: 15,
     center: position,
     mapId: "DEMO_MAP_ID",
+    // disableDefaultUI: true
   });
 
   // The marker, positioned at Uluru
@@ -36,6 +37,21 @@ var rindik = document.getElementById("rindik");
 function togglePlay(){
     return rindik.paused ? rindik.onplay() : rindik.onpause();
 };
+
+// Scroll to top button
+// Get the button
+let mybutton = document.getElementById("scroll-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "flex";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 
 // Form post config
 document.getElementById("form").addEventListener("submit", function (e) {

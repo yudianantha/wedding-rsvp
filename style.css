@@ -1,18 +1,33 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
     position: relative;
     min-height: 100vh;
+    -webkit-scroll-snap-type: y mandatory;
+      -ms-scroll-snap-type: y mandatory;
+          scroll-snap-type: y mandatory;
 }
 
 section {
+    position: relative;
     height: 100vh;
     border-bottom: 1px lightgray solid;
+    scroll-snap-align: start;
 }
 
 #map {
     height: 40%;
-    width: 80%;
+    width: 100%;
     border: 1px solid lightgray;
-    border-radius: 30px;
+    /* border-radius: 30px; */
+}
+
+@media only screen and (min-width: 768px) {
+    #map {
+        width: 80%;
+    }
 }
