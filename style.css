@@ -9,3 +9,10 @@ section {
     height: 100vh;
     border-bottom: 1px lightgray solid;
 }
+
+#map {
+    height: 40%;
+    width: 80%;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+}
