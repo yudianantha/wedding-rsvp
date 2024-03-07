@@ -17,34 +17,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <!-- Bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    
-    <!-- Absolute media player section -->
-    <div id="media-player" style="position: fixed; top: 2rem; right: 2rem; z-index: 999;">
-        <audio controls autoplay loop src="./assets/audio/rindik.mp3" class="d-none" id="rindik"></audio>
-        <button onclick="togglePlay()" class="btn text-warning shadow-lg rounded-circle p-0" style="width: 3rem; height: 3rem;">
-            <i class="bi bi-volume-up-fill" style="font-size: 30px;"></i>
-        </button>
-    </div>
-
-    <!-- Absolute scroll down -->
-    <a href="#description-section" id="scroll-down" class="btn btn-link text-light d-flex flex-column justify-content-center align-items-center">
-        <small>Scroll down</small>
-        <i class="bi bi-chevron-double-down"></i>
-    </a>
-
-    <!-- Absolute scroll top section -->
-    <a href="#hero-section" id="scroll-top" class="btn btn-warning rounded-circle p-0 d-flex justify-content-center align-items-center shadow-lg" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 3rem; height: 3rem;">
-        <i class="bi bi-caret-up-fill"></i>
-    </a>
-
-    <!-- CONTENT -->
-    <div class="content">
+    <!-- POSITION RELATIVE START -->
+    <div class="scroll-container">
         <!-- Hero section -->
-        <section id="hero-section" class="bg-dark text-light d-flex">
+        <section id="hero-section" class="bg-dark text-light d-flex scroll-area">
             <!-- Mobile view -->
             <div class="position-relative hidden h-100 d-flex d-md-none overflow-auto">
                 <img src="./assets/img/wedding-1.jpg" alt="" class="h-100 w-100 object-fit-cover" id="hero-img-mobile">
@@ -63,37 +39,49 @@
             </div>
         </section>
     
-        <!-- Description section -->
-        <section id="description-section" class="py-0 py-md-5">
+        <!-- Information section -->
+        <section id="information-section" class="py-0 py-md-5 scroll-area">
             <div class="hidden h-100 container">
                 <div class="h-100 row">
-                    <div class="col-0 col-md-2">
-                        
-                    </div>
-                    <div class="h-100 col-12 col-md-8 d-flex flex-column justify-content-center align-items-center border rounded-0 rounded-md-5 p-5 p-md-0">
-                        <h5 class="mb-5">Event Pernikahan</h5>
-                        <h3>Sabtu, 16 Maret 2024</h3>
-                        <p>10:00 WITA</p>
-                        <h3>ASTON Denpasar Hotel & Convention Center</h3>
-                        <p class="mb-5">Jl. Gatot Subroto Barat No.283, Pemecutan Kaja, Kec. Denpasar Utara, Kota Denpasar, Bali 80111</p>
+                    <div class="col-0 col-md-3"></div>
+                    <div class="h-100 col-12 col-md-6 d-flex flex-column justify-content-center align-items-center border rounded px-5 py-3">
+                        <h5 class="mb-3 pb-2" style="border-bottom: 2px solid #ffc107;">Event Pernikahan</h5>
+                        <!-- Timer -->
+                        <h1 class="fw-bolder mb-3" id="demo"></h1>
+                        <div class="w-100 d-flex border border-black-50 rounded-3 mb-3">
+                            <div class="px-3 py-2 d-flex justify-content-center align-items-center border-end text-warning">
+                                <i class="bi bi-alarm-fill mb-0" style="font-size: 40px;"></i>
+                            </div>
+                            <div class="px-3 d-flex flex-column justify-content-center">
+                                <p class="fw-bolder mb-0">Sabtu, 16 Maret 2024</p>
+                                <p class="mb-0">10:00 WITA</p>
+                            </div>
+                        </div>
+                        <!-- Maps -->
                         <div id="map"></div>
+                        <div class="w-100 d-flex border border-black-50 rounded-bottom">
+                            <div class="px-3 py-2 d-flex justify-content-center align-items-center border-end text-warning">
+                                <i class="bi bi-geo-alt-fill mb-0" style="font-size: 40px;"></i>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center px-3 py-2">
+                                <p class="fw-bolder mb-0">ASTON Denpasar Hotel & Convention Center</p>
+                                <p class="mb-0 d-block d-md-none" style="font-size: 10px;">Jl. Gatot Subroto Barat No.283, Pemecutan Kaja, Kec. Denpasar Utara, Kota Denpasar, Bali 80111</p>
+                                <p class="mb-0 d-none d-md-block">Jl. Gatot Subroto Barat No.283, Pemecutan Kaja, Kec. Denpasar Utara, Kota Denpasar, Bali 80111</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-0 col-md-2">
-                        
-                    </div>
+                    <div class="col-0 col-md-3"></div>
                 </div>
             </div>
         </section>
     
         <!-- Form section -->
-        <section id="form-section" class="bg-dark text-light">
+        <section id="form-section" class="py-0 py-md-5 bg-dark text-light scroll-area">
             <div class="hidden h-100 container">
                 <div class="h-100 row">
-                    <div class="col-0 col-md-2">
-    
-                    </div>
-                    <div class="h-100 col-12 col-md-8 d-flex justify-content-center align-items-center">
-                        <form id="form" method="POST" class="d-flex flex-column border border-light rounded p-3 p-md-5">
+                    <div class="col-0 col-md-3"></div>
+                    <div class="h-100 col-12 col-md-6 d-flex justify-content-center align-items-center border border-light rounded">
+                        <form id="form" method="POST" class="d-flex flex-column">
                             <h1>Form Undangan</h1>
                             <p class="mb-5">Mohon isi form kehadiran, lalu klik simpan</p>
                             <label for="name" class="form-label">Nama Lengkap</label>
@@ -104,21 +92,18 @@
                                 <option value="Hadir">Hadir</option>
                                 <option value="Berhalangan">Berhalangan</option>
                             </select>
-                            <!-- <input type="text" class="form-control bg-dark text-light" id="Status" name="Status" aria-describedby="nameHelp"> -->
                             <div id="statusHelp" class="form-text text-light mb-5">Pilih status kehadiran anda.</div>
                             <button type="submit" class="btn btn-warning fw-bold" id="submit-button">Simpan</button>
                             <div class="d-none alert alert-light mt-5 p-2" role="alert" id="message"></div>
                         </form>
                     </div>
-                    <div class="col-0 col-md-2">
-                        
-                    </div>
+                    <div class="col-0 col-md-3"></div>
                 </div>
             </div>
         </section>
     
         <!-- Footer section -->
-        <section id="footer-section">
+        <section id="footer-section" class="scroll-area">
             <div class="hidden h-100 d-flex flex-column justify-content-center align-items-center">
                 <h3>Kindly Donate via QRIS</h3>
                 <div style="width: 300px; height: 300px;">
@@ -129,7 +114,33 @@
             </div>
         </section>
     </div>
+    <!-- POSITION RELATIVE END -->
 
+    <!-- POSITION ABSOLUTE & FIXED START -->
+    <!-- Absolute media player section -->
+    <div id="media-player" style="position: fixed; top: 2rem; right: 2rem; z-index: 999;">
+        <audio controls autoplay loop src="./assets/audio/rindik.mp3" class="d-none" id="rindik"></audio>
+        <button onclick="togglePlay()" class="btn text-warning shadow-lg rounded-circle p-0" style="width: 3rem; height: 3rem;">
+            <i class="bi bi-volume-mute-fill" style="font-size: 30px;" id="rindik-icon"></i>
+        </button>
+    </div>
+
+    <!-- Absolute scroll down -->
+    <a href="#description-section" id="scroll-down" class="btn btn-link text-light d-flex flex-column justify-content-center align-items-center">
+        <small>Scroll down</small>
+        <i class="bi bi-chevron-double-down"></i>
+    </a>
+
+    <!-- Absolute scroll top section -->
+    <a href="#hero-section" id="scroll-top" class="btn btn-warning rounded-circle p-0 d-flex justify-content-center align-items-center shadow-lg" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 3rem; height: 3rem;">
+        <i class="bi bi-caret-up-fill"></i>
+    </a>
+    <!-- POSITION ABSOLUTE & FIXED END -->
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
     <!-- Script file -->
     <script src="./app.js"></script>

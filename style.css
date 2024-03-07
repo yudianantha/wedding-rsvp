@@ -15,9 +15,23 @@ body {
     flex-direction: column;
     position: relative;
     min-height: 100vh;
-    -webkit-scroll-snap-type: y mandatory;
+}
+
+.scroll-container,
+.scroll-area {
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.scroll-container {
+    overflow: auto;
+  -webkit-scroll-snap-type: y mandatory;
       -ms-scroll-snap-type: y mandatory;
           scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+    scroll-snap-align: start;
 }
 
 .hidden {
@@ -41,7 +55,7 @@ body {
 
 section {
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
     border-bottom: 1px lightgray solid;
     scroll-snap-align: start;
 }
@@ -98,7 +112,7 @@ section {
 }
 
 #map {
-    height: 40%;
+    height: 30%;
     width: 100%;
     border: 1px solid lightgray;
     /* border-radius: 30px; */
@@ -106,6 +120,12 @@ section {
 
 @media only screen and (min-width: 768px) {
     #map {
-        width: 80%;
+        height: 40%;
+    }
+
+    .scroll-container {
+      -webkit-scroll-snap-type: y proximity;
+          -ms-scroll-snap-type: y proximity;
+              scroll-snap-type: y proximity;
     }
 }
