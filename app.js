@@ -1,3 +1,29 @@
+// Fade in transition
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    })
+})
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+// Audio config
+var rindik = document.getElementById("rindik");
+
+window.onload = function() {
+    rindik.play();
+}
+
+function togglePlay(){
+    return rindik.paused ? rindik.play() : rindik.pause();
+};
+
 // Google Map API config
 (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
     ({key: "AIzaSyCPobPV2hJo1kF6LltI00A_OQskVGjT47M", v: "weekly"});
@@ -18,7 +44,7 @@ async function initMap() {
     zoom: 15,
     center: position,
     mapId: "DEMO_MAP_ID",
-    // disableDefaultUI: true
+    disableDefaultUI: true
   });
 
   // The marker, positioned at Uluru
@@ -31,25 +57,19 @@ async function initMap() {
 
 initMap();
 
-// Audio config
-var rindik = document.getElementById("rindik");
+// Scroll button
+let scrollTopButton = document.getElementById("scroll-top");
+let scrollDownButton = document.getElementById("scroll-down")
 
-function togglePlay(){
-    return rindik.paused ? rindik.onplay() : rindik.onpause();
-};
-
-// Scroll to top button
-// Get the button
-let mybutton = document.getElementById("scroll-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "flex";
+    scrollTopButton.style.display = "flex";
+    scrollDownButton.style.display = "none";
   } else {
-    mybutton.style.display = "none";
+    scrollTopButton.style.display = "none";
+    scrollDownButton.style.display = "flex"
   }
 }
 

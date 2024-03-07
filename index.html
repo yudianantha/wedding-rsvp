@@ -24,14 +24,20 @@
     
     <!-- Absolute media player section -->
     <div id="media-player" style="position: fixed; top: 2rem; right: 2rem; z-index: 999;">
-        <audio controls autoplay muted loop preload="auto" src="./assets/audio/" id="rindik" style="display: none;"></audio>
-        <button onclick="togglePlay()" class="btn btn-warning">
-            <i class="bi bi-volume-up-fill"></i>
+        <audio controls autoplay loop src="./assets/audio/rindik.mp3" class="d-none" id="rindik"></audio>
+        <button onclick="togglePlay()" class="btn text-warning shadow-lg rounded-circle p-0" style="width: 3rem; height: 3rem;">
+            <i class="bi bi-volume-up-fill" style="font-size: 30px;"></i>
         </button>
     </div>
 
+    <!-- Absolute scroll down -->
+    <a href="#description-section" id="scroll-down" class="btn btn-link text-light d-flex flex-column justify-content-center align-items-center">
+        <small>Scroll down</small>
+        <i class="bi bi-chevron-double-down"></i>
+    </a>
+
     <!-- Absolute scroll top section -->
-    <a href="#hero-section" id="scroll-top" class="btn btn-warning rounded-circle p-0 d-flex justify-content-center align-items-center shadow-lg" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 999;width: 3rem; height: 3rem;">
+    <a href="#hero-section" id="scroll-top" class="btn btn-warning rounded-circle p-0 d-flex justify-content-center align-items-center shadow-lg" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 3rem; height: 3rem;">
         <i class="bi bi-caret-up-fill"></i>
     </a>
 
@@ -40,11 +46,13 @@
         <!-- Hero section -->
         <section id="hero-section" class="bg-dark text-light d-flex">
             <!-- Mobile view -->
-            <div class="h-100 d-flex d-md-none overflow-auto">
-                <img src="./assets/img/wedding-1.jpg" alt="" class="h-100 w-100 object-fit-cover" id="hero-img">
+            <div class="position-relative hidden h-100 d-flex d-md-none overflow-auto">
+                <img src="./assets/img/wedding-1.jpg" alt="" class="h-100 w-100 object-fit-cover" id="hero-img-mobile">
+                <div class="hero-gradient position-absolute bottom-0 start-0 w-100 bg-black" style="z-index: 1;"></div>
+                <h1 class="font-wedding d-flex justify-content-center position-absolute w-100" style="bottom: 20%; font-size: 45px; z-index: 2;">Angga & Dewi</h1>
             </div>
             <!-- Desktop view -->
-            <div class="h-100 d-none d-md-flex overflow-auto">
+            <div class="hidden h-100 d-none d-md-flex overflow-auto">
                 <img src="./assets/img/wedding-1.jpg" alt="" class="h-100 w-100 object-fit-cover" id="hero-img">
                 <!-- <div class="d-flex flex-column">
                     <p>Om Swastyastu</p>
@@ -57,13 +65,13 @@
     
         <!-- Description section -->
         <section id="description-section" class="py-0 py-md-5">
-            <div class="h-100 container">
+            <div class="hidden h-100 container">
                 <div class="h-100 row">
                     <div class="col-0 col-md-2">
                         
                     </div>
                     <div class="h-100 col-12 col-md-8 d-flex flex-column justify-content-center align-items-center border rounded-0 rounded-md-5 p-5 p-md-0">
-                        <h1 class="mb-5">Pernikahan</h1>
+                        <h5 class="mb-5">Event Pernikahan</h5>
                         <h3>Sabtu, 16 Maret 2024</h3>
                         <p>10:00 WITA</p>
                         <h3>ASTON Denpasar Hotel & Convention Center</h3>
@@ -79,7 +87,7 @@
     
         <!-- Form section -->
         <section id="form-section" class="bg-dark text-light">
-            <div class="h-100 container">
+            <div class="hidden h-100 container">
                 <div class="h-100 row">
                     <div class="col-0 col-md-2">
     
@@ -89,9 +97,9 @@
                             <h1>Form Undangan</h1>
                             <p class="mb-5">Mohon isi form kehadiran, lalu klik simpan</p>
                             <label for="name" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control bg-dark text-light" name="Nama" aria-describedby="nameHelp">
+                            <input type="text" class="form-control bg-dark text-light" name="Nama" aria-describedby="nameHelp" required>
                             <div id="nameHelp" class="form-text text-light mb-5">Masukkan nama lengkap anda.</div>
-                            <select class="form-select form-select bg-dark text-light" aria-label="Large select example" aria-describedby="statusHelp" name="Status">
+                            <select class="form-select form-select bg-dark text-light" aria-label="Large select example" aria-describedby="statusHelp" name="Status" required>
                                 <option selected>Pilih kehadiran</option>
                                 <option value="Hadir">Hadir</option>
                                 <option value="Berhalangan">Berhalangan</option>
@@ -111,7 +119,14 @@
     
         <!-- Footer section -->
         <section id="footer-section">
-    
+            <div class="hidden h-100 d-flex flex-column justify-content-center align-items-center">
+                <h3>Kindly Donate via QRIS</h3>
+                <div style="width: 300px; height: 300px;">
+                    <img src="./assets/img/qr-code.svg" alt="">
+                </div>
+                <p class="mb-0">Terimakasih</p>
+                <h3>Om Shanti Shanti Shanti Om</h3>
+            </div>
         </section>
     </div>
 
