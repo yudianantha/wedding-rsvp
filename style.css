@@ -157,8 +157,9 @@ section {
 }
 
 .Slider-container {
-    height: 50%;
+    height: 45%;
     width: 60%;
+    overflow: hidden;
 }
 
 #story-description {
@@ -184,6 +185,7 @@ section {
     .Slider-container {
         height: 60%;
         width: 60%;
+        overflow: auto;
     }
 
     #story-description {
