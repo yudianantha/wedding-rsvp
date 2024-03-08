@@ -23,9 +23,23 @@
         <section id="hero-section" class="bg-dark text-light d-flex scroll-area">
             <!-- Mobile view -->
             <div class="position-relative hidden h-100 d-flex d-md-none overflow-auto">
-                <img src="./assets/img/wedding-1.jpg" alt="" class="h-100 w-100 object-fit-cover" id="hero-img-mobile">
+                <!-- <img src="./assets/img/wedding-1.jpg" alt="" class="h-100 w-100 object-fit-cover" id="hero-img-mobile">
                 <div class="hero-gradient position-absolute bottom-0 start-0 w-100 bg-black" style="z-index: 1;"></div>
-                <h1 class="font-wedding d-flex justify-content-center position-absolute w-100" style="bottom: 20%; font-size: 45px; z-index: 2;">Angga & Dewi</h1>
+                <h1 class="font-wedding d-flex justify-content-center position-absolute w-100" style="bottom: 20%; font-size: 45px; z-index: 2;">Angga & Dewi</h1> -->
+                <div id="carouselExampleSlidesOnly" class="carousel slide border border-light w-100 h-100" data-bs-ride="carousel">
+                    <div class="carousel-inner h-100 w-100">
+                        <div class="carousel-item active h-100 w-100">
+                            <img src="./assets/img/wedding-1.jpg" class="d-block h-100 w-100 object-fit-cover" alt="...">
+                        </div>
+                        <div class="carousel-item h-100 w-100">
+                            <img src="./assets/img/wedding-1.jpg" class="d-block h-100 w-100 object-fit-cover" alt="...">
+                        </div>
+                        <div class="carousel-item h-100 w-100">
+                            <img src="./assets/img/wedding-1.jpg" class="d-block h-100 w-100 object-fit-cover" alt="...">
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <!-- Desktop view -->
             <div class="hidden h-100 d-none d-md-flex overflow-auto">
@@ -126,12 +140,13 @@
     </div>
 
     <!-- Absolute scroll down -->
-    <a href="#description-section" id="scroll-down" class="btn btn-link text-light d-flex flex-column justify-content-center align-items-center">
-        <small>Scroll down</small>
+    <a href="#information-section" id="scroll-down" class="btn btn-link text-light d-flex flex-column justify-content-center align-items-center">
+        <small class="d-block d-md-none">Swipe down</small>
+        <small class="d-none d-md-block">Scroll down</small>
         <i class="bi bi-chevron-double-down"></i>
     </a>
 
-    <!-- Absolute scroll top section -->
+    <!-- Absolute scroll top -->
     <a href="#hero-section" id="scroll-top" class="btn btn-warning rounded-circle p-0 d-flex justify-content-center align-items-center shadow-lg" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 3rem; height: 3rem;">
         <i class="bi bi-caret-up-fill"></i>
     </a>

@@ -1,7 +1,6 @@
 // FADE IN TRANSITION START
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        // console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         } else {
@@ -110,20 +109,24 @@ initMap();
 
 
 // SCROLL BUTTON START
-let scrollTopButton = document.getElementById("scroll-top");
-let scrollDownButton = document.getElementById("scroll-down")
+// let scrollTopButton = document.getElementById("scroll-top");
+// let scrollDownButton = document.getElementById("scroll-down")
 
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {
+//   scrollFunction()
+//   console.log('test')
+// };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollTopButton.style.display = "flex";
-    scrollDownButton.style.display = "none";
-  } else {
-    scrollTopButton.style.display = "none";
-    scrollDownButton.style.display = "flex"
-  }
-}
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     scrollTopButton.style.display = "flex";
+//     scrollDownButton.style.display = "none";
+//     console.log('scroll')
+//   } else {
+//     scrollTopButton.style.display = "none";
+//     scrollDownButton.style.display = "flex"
+//   }
+// }
 // SCROLL BUTTON END
 
 
