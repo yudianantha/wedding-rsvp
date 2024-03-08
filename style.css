@@ -161,6 +161,10 @@ section {
     width: 60%;
 }
 
+#story-description {
+    font-size: 20px;
+}
+
 @media only screen and (min-width: 768px) {
     #map {
         height: 40%;
