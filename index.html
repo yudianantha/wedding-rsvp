@@ -15,6 +15,9 @@
 
     <!-- Bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <!-- POSITION RELATIVE START -->
@@ -26,10 +29,11 @@
                 <!-- <img src="./assets/img/wedding-1.jpg" alt="" class="h-100 w-100 object-fit-cover" id="hero-img-mobile">
                 <div class="hero-gradient position-absolute bottom-0 start-0 w-100 bg-black" style="z-index: 1;"></div>
                 <h1 class="font-wedding d-flex justify-content-center position-absolute w-100" style="bottom: 20%; font-size: 45px; z-index: 2;">Angga & Dewi</h1> -->
-                <div id="carouselExampleSlidesOnly" class="carousel slide border border-light w-100 h-100" data-bs-ride="carousel">
+                <!-- <div id="carouselExampleSlidesOnly" class="carousel slide w-100 h-100" data-bs-ride="carousel">
                     <div class="carousel-inner h-100 w-100">
                         <div class="carousel-item active h-100 w-100">
                             <img src="./assets/img/wedding-1.jpg" class="d-block h-100 w-100 object-fit-cover" alt="...">
+                            <video src="./assets/video/Balinese Video Pre Wedding N W.mp4"></video>
                         </div>
                         <div class="carousel-item h-100 w-100">
                             <img src="./assets/img/wedding-1.jpg" class="d-block h-100 w-100 object-fit-cover" alt="...">
@@ -38,8 +42,10 @@
                             <img src="./assets/img/wedding-1.jpg" class="d-block h-100 w-100 object-fit-cover" alt="...">
                         </div>
                     </div>
-                </div>
-                
+                </div> -->
+                <video src="./assets/video/Balinese Video Pre Wedding N W.mp4" autoplay loop muted class="h-100 w-100 object-fit-cover"></video>
+                <div class="hero-gradient position-absolute bottom-0 start-0 w-100 bg-black" style="z-index: 1;"></div>
+                <h1 class="font-floral d-flex justify-content-center position-absolute w-100" style="bottom: 15%; font-size: 45px; z-index: 2;">Bagus & Dewi</h1>
             </div>
             <!-- Desktop view -->
             <div class="hidden h-100 d-none d-md-flex overflow-auto">
@@ -49,6 +55,68 @@
                     <p>Undangan pernikahan</p>
                     <h1>Angga & Tania</h1>
                     <p>10 Oktober 2024</p>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section id="story-section" class="scroll-area">
+            <div class="hidden container h-100">
+                <div class="row h-100">
+                    <div class="col-0 col-md-3"></div>
+                    <div class="col-12 col-md-6 h-100 d-flex flex-column justify-content-center align-items-center p-0 p-md-5">
+                        <div class="mb-5">
+                            <h5 class="font-floral bold" style="border-bottom: 2px solid #ffc107; font-size: 40px;">Cerita Kami</h5>
+                        </div>
+                        <div class="swiper Slider-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide rounded-5">
+                                    <img src="./assets/img/wedding-1.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                                </div>
+                                <div class="swiper-slide rounded-5">
+                                    <img src="./assets/img/wedding-2.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                                </div>
+                                <div class="swiper-slide rounded-5">
+                                    <img src="./assets/img/wedding-3.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                                </div>
+                                <div class="swiper-slide rounded-5">
+                                    <img src="./assets/img/wedding-4.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                                </div>
+                                <div class="swiper-slide rounded-5">
+                                    <img src="./assets/img/wedding-5.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                                </div>
+                                <div class="swiper-slide rounded-5">
+                                    <img src="./assets/img/wedding-6.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                                </div>
+                                <div class="swiper-slide rounded-5">
+                                    <img src="./assets/img/wedding-7.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                                </div>
+                                <div class="swiper-slide rounded-5">
+                                    <img src="./assets/img/wedding-8.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-pagination"></div> -->
+                        </div>
+                        <div class="text-center px-5 my-3" style="height: 20%;">
+                            <p class="font-story" id="story-description">Calyani and Matthew met in residency training in sunny San Diego.</p>
+                        </div>
+                    </div>
+                    <div class="col-0 col-md-3"></div>
+                </div>
+                <!-- <div class="story-gradient position-absolute top-0 start-0 w-100 bg-black" style="z-index: 2;"></div>
+                <div class="swiper h-100 w-100" style="z-index: 1;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./assets/img/wedding-1.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/img/wedding-1.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/img/wedding-1.jpg" class="h-100 w-100 object-fit-cover" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div> -->
             </div>
         </section>
@@ -156,6 +224,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <!-- Swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Script file -->
     <script src="./app.js"></script>

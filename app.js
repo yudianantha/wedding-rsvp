@@ -39,6 +39,34 @@ function togglePlay(){
 
 
 
+// SWIPER JS START
+var storyDescription = document.getElementById("story-description");
+const storyList = {
+  0: "Calyani and Matthew met in residency training in sunny San Diego",
+  1: "Calyani had just moved from LA to start her intern year",
+  2: "and Matthew was the newly minted supervising resident of the team",
+  3: "They figured if they could make it through their first months as an intern and resident together they could probably survive anything",
+  4: "Calyani and Matthew got legally married on March 2,2022 at SF City Hall",
+  5: "and they can't wait to do it again with a traditional ceremony to unite their families and friends",
+  6: "We look forward to seeing you all soon!",
+  7: "We proclaimed our love for the Lord together!",
+}
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  effect: 'cards',
+  grabCursor: true,
+  centerdSlides: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+swiper.on('transitionEnd', function() {
+  storyDescription.innerHTML = storyList[swiper.realIndex]
+})
+// SWIPER JS END
+
+
+
 // TIMER START
 // Set the date we're counting down to
 var countDownDate = new Date("Mar 16, 2024 10:00:00").getTime();
