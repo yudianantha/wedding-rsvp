@@ -30,7 +30,7 @@
                 <div class="hero-gradient position-absolute bottom-0 start-0 w-100 bg-black" style="z-index: 1;"></div>
                 <div class="d-flex flex-column justify-content-center align-items-center position-absolute w-100" style="bottom: 20%; z-index: 2;">
                     <h1 class="font-floral mb-0" style="font-size: 45px;">Bagus & Dewi</h1>
-                    <h2 class="text-warning">16.03.24</h2>
+                    <h2>16.03.24</h2>
                 </div>
             </div>
             <!-- Desktop view -->
@@ -55,11 +55,12 @@
             <div class="hidden container h-100">
                 <div class="row h-100">
                     <div class="col-0 col-md-3"></div>
-                    <div class="col-12 col-md-6 h-100 d-flex flex-column justify-content-center align-items-center p-0 p-md-5 overflow-hidden">
-                        <div class="mb-5">
+                    <div class="col-12 col-md-6 h-100 d-flex flex-column justify-content-center align-items-center p-0 p-md-5 overflow-hidden overflow-md-auto" style="z-index: 1;">
+                        <div class="d-flex flex-column mb-5 text-center">
                             <h5 class="font-floral bold" style="border-bottom: 2px solid #ffc107; font-size: 40px;">Cerita Kami</h5>
+                            <small class="text-muted">Swipe untuk melihat cerita</small>
                         </div>
-                        <div class="swiper Slider-container">
+                        <div class="swiper Slider-container" style="z-index: 2;">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide rounded-5">
                                     <img src="./assets/img/wedding-1.jpg" class="h-100 w-100 object-fit-cover" alt="">
@@ -102,10 +103,11 @@
                 <div class="h-100 row">
                     <div class="col-0 col-md-3"></div>
                     <div class="h-100 col-12 col-md-6 d-flex flex-column justify-content-center align-items-center border-responsive rounded px-5 py-3">
-                        <h5 class="font-floral bold mb-5" style="border-bottom: 2px solid #ffc107; font-size: 40px;">Waktu & Lokasi</h5>
+                        <h5 class="font-floral bold" style="border-bottom: 2px solid #ffc107; font-size: 40px;">Waktu & Lokasi</h5>
+                        <small class="text-muted mb-3 mb-md-5 text-center">Klik waktu untuk simpan Google Calendar dan klik lokasi untuk buka rute Google Maps</small>
                         <!-- Timer -->
                         <h1 class="fw-bolder mb-3" id="demo"></h1>
-                        <div class="w-100 d-flex border border-black-50 rounded-3 mb-3">
+                        <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=M2cwaTE1cThqOWRwazVvYTN0YTd2c2Y5a3YgeXVkaWhvYmJ5QG0&amp;tmsrc=yudihobby%40gmail.com" class="w-100 d-flex border border-black-50 rounded-3 mb-3 text-dark" style="text-decoration: none;">
                             <div class="px-3 py-2 d-flex justify-content-center align-items-center border-end text-warning">
                                 <i class="bi bi-alarm-fill mb-0" style="font-size: 40px;"></i>
                             </div>
@@ -113,10 +115,10 @@
                                 <p class="fw-bolder mb-0">Sabtu, 16 Maret 2024</p>
                                 <p class="mb-0">10:00 WITA</p>
                             </div>
-                        </div>
+                        </a>
                         <!-- Maps -->
                         <div id="map"></div>
-                        <div class="w-100 d-flex border border-black-50 rounded-bottom">
+                        <a target="_blank" href="https://www.google.com/maps?saddr=My+Location&daddr=-8.639396220918453,115.20626781329634" class="w-100 d-flex border border-black-50 rounded-bottom text-dark" style="text-decoration: none;">
                             <div class="px-3 py-2 d-flex justify-content-center align-items-center border-end text-warning">
                                 <i class="bi bi-geo-alt-fill mb-0" style="font-size: 40px;"></i>
                             </div>
@@ -125,7 +127,7 @@
                                 <p class="mb-0 d-block d-md-none" style="font-size: 10px;">Jl. Gatot Subroto Barat No.283, Pemecutan Kaja, Kec. Denpasar Utara, Kota Denpasar, Bali 80111</p>
                                 <p class="mb-0 d-none d-md-block">Jl. Gatot Subroto Barat No.283, Pemecutan Kaja, Kec. Denpasar Utara, Kota Denpasar, Bali 80111</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-0 col-md-3"></div>
                 </div>
