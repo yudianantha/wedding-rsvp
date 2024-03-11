@@ -28,15 +28,26 @@
             <div class="position-relative hidden h-100 d-flex d-md-none">
                 <video src="./assets/video/wedding-video-1.mp4" autoplay loop muted class="h-100 w-100 object-fit-cover"></video>
                 <div class="hero-gradient position-absolute bottom-0 start-0 w-100 bg-black" style="z-index: 1;"></div>
-                <h1 class="font-floral d-flex justify-content-center position-absolute w-100" style="bottom: 20%; font-size: 45px; z-index: 2;">Bagus & Dewi</h1>
+                <div class="d-flex flex-column justify-content-center align-items-center position-absolute w-100" style="bottom: 20%; z-index: 2;">
+                    <h1 class="font-floral mb-0" style="font-size: 45px;">Bagus & Dewi</h1>
+                    <h2 class="text-warning">16.03.24</h2>
+                </div>
             </div>
             <!-- Desktop view -->
             <div class="position-relative hidden h-100 w-100 d-none d-md-flex">
                 <img src="./assets/img/wedding-3.jpg" class="w-100 h-100 object-fit-cover" alt="">
-                <!-- <video src="./assets/video/wedding-video-2.mp4" autoplay loop muted class="h-100 w-100 object-fit-cover"></video> -->
                 <div class="hero-gradient position-absolute bottom-0 start-0 w-100 bg-black" style="z-index: 1;"></div>
-                <h1 class="font-floral d-flex justify-content-center position-absolute w-100" style="bottom: 15%; font-size: 120px; z-index: 2;">Bagus & Dewi</h1>
+                <div class="d-flex flex-column justify-content-center align-items-center position-absolute w-100" style="bottom: 15%; z-index: 2;">
+                    <h1 class="font-floral mb-0" style="font-size: 120px;">Bagus & Dewi</h1>
+                    <h2 class="text-warning">16.03.24</h2>
+                </div>
             </div>
+            <!-- Absolute scroll down -->
+            <a href="#story-section" id="scroll-down" class="btn btn-link text-light d-flex flex-column justify-content-center align-items-center">
+                <small class="d-block d-md-none">Swipe down</small>
+                <small class="d-none d-md-block">Scroll down</small>
+                <i class="bi bi-chevron-double-down"></i>
+            </a>
         </section>
 
         <!-- Our Story -->
@@ -75,7 +86,6 @@
                                     <img src="./assets/img/wedding-8.jpg" class="h-100 w-100 object-fit-cover" alt="">
                                 </div>
                             </div>
-                            <!-- <div class="swiper-pagination"></div> -->
                         </div>
                         <div class="text-center px-5 my-3" style="height: 20%;">
                             <p class="font-story" id="story-description">Calyani and Matthew met in residency training in sunny San Diego.</p>
@@ -163,8 +173,8 @@
     </div>
     <!-- POSITION RELATIVE END -->
 
-    <!-- POSITION ABSOLUTE & FIXED START -->
-    <!-- Absolute media player section -->
+    <!-- POSITION FIXED START -->
+    <!-- Fixed media player section -->
     <div id="media-player" style="position: fixed; top: 2rem; right: 2rem; z-index: 999;">
         <audio controls autoplay loop src="./assets/audio/rindik.mp3" class="d-none" id="rindik"></audio>
         <button onclick="togglePlay()" class="btn text-warning shadow-lg rounded-circle p-0" style="width: 3rem; height: 3rem;">
@@ -172,14 +182,7 @@
         </button>
     </div>
 
-    <!-- Absolute scroll down -->
-    <a href="#story-section" id="scroll-down" class="btn btn-link text-light d-flex flex-column justify-content-center align-items-center">
-        <small class="d-block d-md-none">Swipe down</small>
-        <small class="d-none d-md-block">Scroll down</small>
-        <i class="bi bi-chevron-double-down"></i>
-    </a>
-
-    <!-- Absolute scroll top -->
+    <!-- Fixed scroll top -->
     <a href="#hero-section" id="scroll-top" class="btn btn-warning rounded-circle p-0 d-flex justify-content-center align-items-center shadow-lg" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 3rem; height: 3rem;">
         <i class="bi bi-caret-up-fill"></i>
     </a>
