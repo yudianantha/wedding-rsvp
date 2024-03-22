@@ -157,8 +157,8 @@ section {
 }
 
 .Slider-container {
-    height: 45%;
-    width: 60%;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -182,11 +182,11 @@ section {
         border-radius: 15px;
     }
 
-    .Slider-container {
+    /* .Slider-container {
         height: 60%;
         width: 60%;
         overflow: auto;
-    }
+    } */
 
     #story-description {
         font-size: 30px;
